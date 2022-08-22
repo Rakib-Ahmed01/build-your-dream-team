@@ -97,15 +97,17 @@ addCustomBtn.addEventListener("click", (e) => {
 });
 
 playerContainer.addEventListener("click", (event) => {
-  selectedPlayerCount++;
-  console.log(selectedPlayerCount);
-  if (selectedPlayerCount > 5) {
-    alert(`You Can't Add More Than 5 Players...`);
-  } else {
-    const selectedPlayer = getSelectedPlayer(event);
-    selectedPlayerList.appendChild(selectedPlayer);
-    event.target.style.backgroundColor = "#ecf0f1";
-    event.target.style.color = "black";
-    event.target.disabled = true;
+  if (event.target.tagName === "BUTTON") {
+    selectedPlayerCount++;
+    if (selectedPlayerCount > 5) {
+      alert(`You Can't Add More Than 5 Players...`);
+    } else {
+      const selectedPlayer = getSelectedPlayer(event);
+      selectedPlayerList.appendChild(selectedPlayer);
+      event.target.style.backgroundColor = "#ecf0f1";
+      event.target.style.color = "black";
+      event.target.disabled = true;
+    }
   }
+  event.stopPropagation();
 });
