@@ -116,8 +116,7 @@ playerContainer.addEventListener("click", (event) => {
     } else {
       const selectedPlayer = getSelectedPlayer(event);
       selectedPlayerList.appendChild(selectedPlayer);
-      event.target.style.backgroundColor = "#ecf0f1";
-      event.target.style.color = "black";
+      event.target.style.backgroundColor = "#60a5fa";
       event.target.disabled = true;
     }
   }
