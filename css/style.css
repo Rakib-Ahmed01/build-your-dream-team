@@ -4312,6 +4312,10 @@ p {
   height: 1rem;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -4498,6 +4502,11 @@ p {
   border-style: none;
 }
 
+.border-orange-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 146 60 / var(--tw-border-opacity));
+}
+
 .border-orange-300 {
   --tw-border-opacity: 1;
   border-color: rgb(253 186 116 / var(--tw-border-opacity));
@@ -4626,12 +4635,12 @@ p {
   line-height: 1.75rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .font-black {
@@ -4644,6 +4653,10 @@ p {
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .leading-normal {
