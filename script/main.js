@@ -1,5 +1,7 @@
 console.log("Bismillah...");
 
+//Declaring All Variables
+
 const playerNames = document.querySelectorAll(".player-name");
 const playerInput = document.getElementById("player");
 const managerInput = document.getElementById("manager");
@@ -17,11 +19,15 @@ const playerName = document.querySelector(".player-name-add");
 
 let selectedPlayerCount = 0;
 
+//Calculating
+
 calculateBtn.addEventListener("click", (event) => {
   if (selectedPlayerCount === 0) {
     alert("Select at least one player...");
   } else if (playerInput.value == "") {
     alert("Enter Player Expense...");
+  } else if (playerInput.value < 0) {
+    alert("Enter positive amount...");
   } else {
     const perPlayerExpense = +playerInput.value;
     let expense =
@@ -33,8 +39,14 @@ calculateBtn.addEventListener("click", (event) => {
 });
 
 calculateTotalBtn.addEventListener("click", (event) => {
-  if (managerInput.value == "" || coachInput.value == "") {
+  if (selectedPlayerCount === 0) {
+    alert("Select at least one player...");
+  } else if (playerInput.value == "") {
+    alert("Enter player expense...");
+  } else if (managerInput.value == "" || coachInput.value == "") {
     alert("Enter manager's & coach's salary...");
+  } else if (managerInput.value < 0 || coachInput.value < 0) {
+    alert("Enter positive amount...");
   } else {
     let perPlayerExpense = +playerInput.value;
     let playerExpense =
@@ -66,7 +78,6 @@ addCustomBtn.addEventListener("click", (e) => {
     alert("Please provide image link and card title...");
   } else {
     const divElement = document.createElement("div");
-    // cardContainer.appendChild(element);
     divElement.innerHTML = `
     <div class="player rounded">
     <img src="${imageLink.value}" alt="" class="rounded-t" />
