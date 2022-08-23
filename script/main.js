@@ -1,7 +1,4 @@
-console.log("Bismillah...");
-
 //Declaring All Variables
-
 const playerNames = document.querySelectorAll(".player-name");
 const playerInput = document.getElementById("player");
 const managerInput = document.getElementById("manager");
@@ -19,8 +16,7 @@ const playerName = document.querySelector(".player-name-add");
 
 let selectedPlayerCount = 0;
 
-//Calculating
-
+//Calculating All Players Expense
 calculateBtn.addEventListener("click", (event) => {
   if (selectedPlayerCount === 0) {
     alert("Select at least one player...");
@@ -38,6 +34,7 @@ calculateBtn.addEventListener("click", (event) => {
   }
 });
 
+//Calculating Total expense
 calculateTotalBtn.addEventListener("click", (event) => {
   if (selectedPlayerCount === 0) {
     alert("Select at least one player...");
@@ -61,10 +58,12 @@ calculateTotalBtn.addEventListener("click", (event) => {
   }
 });
 
+//Getting The Player Name Which Button Will Be Clicked
 function getSelectedPlayerName(event) {
   return event.target.parentElement.firstElementChild.innerText;
 }
 
+//Creating List Item And Inserting Player Name To That List Item InnerText
 function getSelectedPlayer(event) {
   const playerName = getSelectedPlayerName(event);
   let player = document.createElement("li");
@@ -73,6 +72,7 @@ function getSelectedPlayer(event) {
   return player;
 }
 
+//Dynamically Adding Player Card
 addCustomBtn.addEventListener("click", (e) => {
   if (imageLink.value === "" || playerName.value === "") {
     alert("Please provide image link and card title...");
@@ -107,6 +107,7 @@ addCustomBtn.addEventListener("click", (e) => {
   }
 });
 
+//Appending List Item To The List And Disabling The Button
 playerContainer.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
     selectedPlayerCount++;

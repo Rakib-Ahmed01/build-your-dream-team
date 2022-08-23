@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build Your Dream Team</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
@@ -15,9 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
       rel="stylesheet"
     />
+
+    <!-- CSS Output File -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="font-['Manrope']">
+    <!-- Header Section Starts -->
     <header
       class="w-full h-[300px] lg:h-[350px] bg-gray-900 text-center flex justify-center items-center p-5"
     >
@@ -34,8 +39,12 @@
         </p>
       </div>
     </header>
+    <!-- Header Section Ends  -->
+
+    <!-- Main Section Starts -->
     <main class="p-4">
       <section class="max-w-5xl flex gap-4 mx-auto">
+        <!-- Player Section Starts -->
         <section
           id="players"
           class="w-[96%] mx-auto max-w-[85rem] grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3"
@@ -197,6 +206,9 @@
             </div>
           </div>
         </section>
+        <!-- Player Section Ends -->
+
+        <!-- Calculation Section Starts -->
         <section
           id="calculation"
           class="w-[140px] sm:w-[350px] space-y-3 text-sm"
@@ -285,8 +297,10 @@
             </div>
           </div>
         </section>
+        <!-- Calculation Section Ends -->
       </section>
 
+      <!-- Add Favourite Player Button -->
       <button
         id="custom-btn"
         type="button"
@@ -296,7 +310,6 @@
       >
         Add Your Favourite Player
       </button>
-
       <!-- Modal -->
       <div
         class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
@@ -376,11 +389,16 @@
         </div>
       </div>
     </main>
+    <!-- Main Section Ends -->
+
+    <!-- Footer Section Starts -->
     <footer
       class="text-center text-white bg-gray-900 flex justify-center items-center p-4"
     >
       <p class="text-lg">All Rights Reserved</p>
     </footer>
+    <!-- Footer Section Ends -->
+
     <script src="node_modules/tw-elements/dist/js/index.min.js"></script>
     <script src="script/main.js"></script>
   </body>
